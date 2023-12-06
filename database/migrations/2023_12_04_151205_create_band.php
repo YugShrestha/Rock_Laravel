@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('band', function (Blueprint $table) {
             $table->id();
-            $table->String("name");
+            $table->String("artist");
             $table->String("location");
             $table->String("email");
             $table->String("tags");
-            $table->String("album");
-            $table->String("list");
+            $table->String("title");
+            $table->string("list");
             $table->longText("description");
             $table->timestamps();
         });

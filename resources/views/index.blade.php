@@ -8,7 +8,12 @@
        @foreach($listings as $listing)
             <x-list-card :listing="$listing" />
         @endforeach
-        @else echo "no record found"
+        @else {{"no record found"}}
 
         @endif
+     
+  </div>
        </x-layout>
+       <div class="mt-6 p-6">
+        {{$listings->links()}}
+         </div>

@@ -3,15 +3,15 @@
         >
             <div
                 class="absolute top-0 left-0 w-full h-full opacity-10 bg-no-repeat bg-center"
-                style="background-image: url('img/laravel-logo.png')"
+                style="background-image: url('img/baner.jpg')"
             ></div>
 
             <div class="z-10">
                 <h1 class="text-6xl font-bold uppercase text-white">
-                    Lara<span class="text-black">Gigs</span>
+                    Rock<span class="text-black">Mandu</span>
                 </h1>
                 <p class="text-2xl text-gray-200 font-bold my-4">
-                    Find or post Laravel jobs & projects
+                    Find or post songs $ albums
                 </p>
                 <div>
                     <a
