@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function index(){
-      $listing=Band::latest()->filters(request(['tags']))->paginate(2);
+      $listing=Band::latest()->filters(request(['tags','search']))->paginate(4);
         return view('index',[
             'listings'=>$listing
         ]);

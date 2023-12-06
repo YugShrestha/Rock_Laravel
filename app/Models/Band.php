@@ -19,5 +19,9 @@ class Band extends Model
   
                $Query->where('tags','like','%'.request('tag').'%'); 
            }
+           if($filters['search']?? false){
+            $Query->where('artist', 'like', '%' . request('search') . '%')->orwhere('tags', 'like', '%' . request('search') . '%')->orwhere('description', 'like', '%' . request('search') . '%')
+            ->orwhere('list','like','%'. request('search') .'%')->orwhere('title','like','%' .request('search') .'%');
+           }
     }
 }
