@@ -11,7 +11,7 @@
                     Rock<span class="text-black">Mandu</span>
                 </h1>
                 <p class="text-2xl text-gray-200 font-bold my-4">
-                    Find or post songs $ albums
+                    Find or post song albums
                 </p>
                 <div>
                     <a

@@ -50,18 +50,18 @@ class UserController extends Controller
     }
 
   
-
+ // Show Cretae form
     Band::create($fieldforms);
     return redirect('/')->with('message', 'Created sucessfully');
   }
 
-     //show edit dorm
+     //show edit form
      public function edit($id){
         
       return view('listings.edit',["listing"=>Band::Find($id)]);
         }
 
-
+//Update Listings
   public function Update(Request $request,$id)
       {
       
@@ -69,7 +69,7 @@ class UserController extends Controller
         $fieldforms = $request->validate([
           'artist' => 'required',
           'title' => 'required',
-          'logo' => 'required',
+          
           'location' => 'required',
           'list' => 'required',
           'email' => ['required', 'email'],
@@ -85,7 +85,13 @@ class UserController extends Controller
               
           }
           Band::find($id)->Update($fieldforms);
-          return back()->with('message',' updated sucessfully');
+          return back()->with('message','updated sucessfully');
   
 }
+
+       //Delete Listings
+       public function destroy($id){
+        Band::find($id)->delete();
+        return redirect("/")->with('message','Deleted Sucessfully');
+       }
 }
