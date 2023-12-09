@@ -30,7 +30,11 @@ route::get('/listings/create',[UserController::class,'create']);
 //STore Listing Data
 Route::post('/listings',[UserController::class,'store']);
 
+//edit Lsting Data
+Route::get('/listings/{id}/edit',[UserController::class,'edit']);
 
+//Update Lsting DAta
+Route::put("/listings/{id}",[UserController::class,'Update']);
 
 //SHOW POST BY ID
 route::get('/listings/{id}',[UserController::class,'show']);
