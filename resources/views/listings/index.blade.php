@@ -16,7 +16,8 @@
         @endif
      
   </div>
-       </x-layout>
-       <div class="mt-6 p-6">
+  <div class="mt-6 p-6">
         {{$listings->links()}}
+       </x-layout>
+       
          </div>
