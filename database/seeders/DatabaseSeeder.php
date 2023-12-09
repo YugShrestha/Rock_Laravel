@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         Band::create([
             'artist'=>'Pink Floyd',
             'location'=>'Nepal',
-            'tags'=>'Nirvan,foofighters',
+            
             'email'=>'test@gmail.com',
             'title'=>'Dark side of the moon',
             'list'=>'speak to me , breathe , on the run , time , The great Gig in the sky , money, us and them,any colour you like, brain damage,eclipse',

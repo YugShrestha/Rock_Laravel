@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Band extends Model
 {
-
+    protected $fillable=['artist','tags','title','email','description','list','location'];
     public $table='band';
     public $timestamps=true;
     use HasFactory;
