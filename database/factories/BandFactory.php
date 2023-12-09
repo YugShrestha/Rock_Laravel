@@ -12,7 +12,7 @@ class BandFactory extends Factory
         return [
             'artist' => $this->faker->name(),
             'location' => $this->faker->city(),
-            'tags' => 'Nirvana,foofighters', // You might want to adjust this dynamically
+            
             'email' => $this->faker->email(),
             'title' => $this->faker->title(),
             'list' => $this->faker->word(13, true), // Example: generate a list of 5 words

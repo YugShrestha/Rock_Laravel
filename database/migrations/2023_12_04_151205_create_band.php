@@ -18,7 +18,7 @@ return new class extends Migration
             $table->String("artist");
             $table->String("location");
             $table->String("email");
-            $table->String("tags");
+            $table->String("logo")->nullable();
             $table->String("title");
             $table->string("list");
             $table->longText("description");

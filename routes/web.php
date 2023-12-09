@@ -22,9 +22,13 @@ Route::get('/dbconn',function(){
 });
 //SHOW ALL THE POST
 Route::get('/',[UserController::class,'index']);
-   
+
+
+//Show Create form
 route::get('/listings/create',[UserController::class,'create']);
 
+//STore Listing Data
+Route::post('/listings',[UserController::class,'store']);
 
 
 
