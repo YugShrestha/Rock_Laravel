@@ -23,7 +23,14 @@ Route::get('/dbconn',function(){
 //SHOW ALL THE POST
 Route::get('/',[UserController::class,'index']);
    
+route::get('/listings/create',[UserController::class,'create']);
+
+
+
 
 //SHOW POST BY ID
 route::get('/listings/{id}',[UserController::class,'show']);
+
+
+
 
