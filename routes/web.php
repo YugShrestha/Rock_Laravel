@@ -36,6 +36,9 @@ Route::get('/listings/{id}/edit',[UserController::class,'edit']);
 //Update Lsting DAta
 Route::put("/listings/{id}",[UserController::class,'Update']);
 
+//Delete Listing Data
+Route::delete("/listings/{id}",[UserController::class,'destroy']);
+
 //SHOW POST BY ID
 route::get('/listings/{id}',[UserController::class,'show']);
 
