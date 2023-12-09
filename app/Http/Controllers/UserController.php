@@ -42,7 +42,7 @@ class UserController extends Controller
       ]);
 
       Band::create($fieldforms);
-     return redirect('/');
+      return redirect('/')->with('message','Created sucessfully');
 
     }
 }
