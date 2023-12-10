@@ -51,7 +51,7 @@
                           <label for="list" class="inline-block text-lg mb-2">
                               Lists
                           </label>
-                          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="list" value="{{$listing->list}}"/>
+                          <input type="text" class="border border-gray-200 rounded p-2 w-full" name="list" placeholder="Example:speak,breathe " value="{{$listing->list}}"/>
                           @error('list')
                           <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                           @enderror
