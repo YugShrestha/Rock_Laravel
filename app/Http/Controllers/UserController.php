@@ -22,8 +22,13 @@ class UserController extends Controller
   {
 
     $listing = Band::find($id);
+    $listings=explode(',',$listing['list']);
+    
+
+    
     return view('listings.show', [
-      'listing' => $listing
+      'listing' => $listing,
+      'lists'=> $listings
     ]);
   }
   // Create Form
