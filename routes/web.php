@@ -48,3 +48,6 @@ route::get('/listings/{id}',[ListingController::class,'show']);
 route::get('/register',[UserController::class,'create']);
 
 
+//create user
+
+route::post('/users',[UserController::class,'store']);
