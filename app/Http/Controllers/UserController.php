@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use App\Models\User;
-
+use Illuminate\Auth\Events\Validated;
 
 class UserController extends Controller
 {
@@ -30,5 +30,9 @@ class UserController extends Controller
      auth()->login($user);
      return redirect('/')->with('message','user created');
     }
+
+    //Show Login
+    public function login(){
+        return view("users.login");
+    }
 }
-  
