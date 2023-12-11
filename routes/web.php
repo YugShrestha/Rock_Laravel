@@ -51,3 +51,7 @@ route::get('/register',[UserController::class,'create']);
 //create user
 
 route::post('/users',[UserController::class,'store']);
+
+
+//create login
+//route::get('/login',[UserController::class,'login']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Band;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ListingController extends Controller
 {
@@ -46,7 +47,7 @@ class ListingController extends Controller
       'logo' => 'required',
       'location' => 'required',
       'list' => 'required',
-      'email' => ['required', 'email'],
+      'email' => ['required', 'email',Rule::unique('band','email')],
       'description' => 'required'
     ]);
     if ($request->hasFile('logo')) {
