@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ListingController;
 use App\Models\Band;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,27 +22,29 @@ Route::get('/dbconn',function(){
     return view('database');
 });
 //SHOW ALL THE POST
-Route::get('/',[UserController::class,'index']);
+Route::get('/',[ListingController::class,'index']);
 
 
 //Show Create form
-route::get('/listings/create',[UserController::class,'create']);
+route::get('/listings/create',[ListingController::class,'create']);
 
 //STore Listing Data
-Route::post('/listings',[UserController::class,'store']);
+Route::post('/listings',[ListingController::class,'store']);
 
 //edit Lsting Data
-Route::get('/listings/{id}/edit',[UserController::class,'edit']);
+Route::get('/listings/{id}/edit',[ListingController::class,'edit']);
 
 //Update Lsting DAta
-Route::put("/listings/{id}",[UserController::class,'Update']);
+Route::put("/listings/{id}",[ListingController::class,'Update']);
 
 //Delete Listing Data
-Route::delete("/listings/{id}",[UserController::class,'destroy']);
+Route::delete("/listings/{id}",[ListingController::class,'destroy']);
 
 //SHOW POST BY ID
-route::get('/listings/{id}',[UserController::class,'show']);
+route::get('/listings/{id}',[ListingController::class,'show']);
 
+//show Register
 
+route::get('/register',[UserController::class,'create']);
 
 
