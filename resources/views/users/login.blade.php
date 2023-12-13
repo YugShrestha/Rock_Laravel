@@ -6,16 +6,27 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Log In
             </h2>
-            <p class="mb-4">Log in to post gigs</p>
+            <p class="mb-4">Log in p>
         </header>
 
-        <form action="">
+        <form method="POST" action="/users/authenticate">
+            @csrf
             <div class="mb-6">
+            @error('email')
+            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+             @enderror
+                
+                
                 <label for="email" class="inline-block text-lg mb-2">Email</label>
-                <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" />
+                <input type="email" class="border border-gray-200 rounded p-2 w-full" name="email" value="{{old('email')}}" />
             </div>
 
             <div class="mb-6">
+            @error('password')
+            <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+             @enderror
+                
+                
                 <label for="password" class="inline-block text-lg mb-2">
                     Password
                 </label>
