@@ -15,6 +15,8 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
+
+        dd($request->all());
         $formFileds=$request->validate([
             'name'=>['required','min:3'],
             'email'=>['required','email',Rule::unique('user','email')],
@@ -29,6 +31,18 @@ class UserController extends Controller
      //login
      auth()->login($user);
      return redirect('/')->with('message','user created');
+    }
+
+
+
+    public function logout(Request $request){
+
+        auth()->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/')->with('message','You Have Been LoggedOut');
+       
+
     }
 
     //Show Login
