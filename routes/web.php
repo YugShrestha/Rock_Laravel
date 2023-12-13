@@ -52,5 +52,10 @@ route::get('/register',[UserController::class,'create']);
 
 route::post('/users',[UserController::class,'store']);
 
+//logout user
+
+route::post('/logout',[UserController::class,'logout']);
+
 //create login
 route::get('/login',[UserController::class,'login']);
+
