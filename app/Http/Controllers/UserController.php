@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function store(Request $request){
 
-        dd($request->all());
+        
         $formFileds=$request->validate([
             'name'=>['required','min:3'],
             'email'=>['required','email',Rule::unique('user','email')],
@@ -49,4 +49,25 @@ class UserController extends Controller
     public function login(){
         return view("users.login");
     }
+
+    public function authenticate(request $request){
+
+        $formFileds=$request->validate([
+            
+            'email'=>['required','email'],
+            'password'=>'required'
+        ]);
+        If(auth()->attempt($formFileds)){
+            $request->session()->regenerate();
+            return redirect('/')->with(['message'=>'You are no loggedin']);
+
+        
+    }
+    return back()->withErrors(['email'=>'invalid Credentials'])->onlyInput('email');
+
+
+
+
+   
+}
 }
