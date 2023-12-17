@@ -59,7 +59,7 @@ class UserController extends Controller
         ]);
         If(auth()->attempt($formFileds)){
             $request->session()->regenerate();
-            return redirect('/')->with(['message'=>'You are no loggedin']);
+            return redirect('/')->with(['message'=>'You are now loggedin']);
 
         
     }
