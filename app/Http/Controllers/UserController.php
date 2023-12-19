@@ -37,7 +37,7 @@ class UserController extends Controller
 
     public function logout(Request $request){
 
-        auth()->logout();
+        auth()->logout(); 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/')->with('message','You Have Been LoggedOut');
@@ -53,7 +53,7 @@ class UserController extends Controller
     public function authenticate(request $request){
 
         $formFileds=$request->validate([
-            
+            asasda
             'email'=>['required','email'],
             'password'=>'required'
         ]);
