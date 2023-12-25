@@ -53,7 +53,7 @@ class UserController extends Controller
     public function authenticate(request $request){
 
         $formFileds=$request->validate([
-            asasda
+            
             'email'=>['required','email'],
             'password'=>'required'
         ]);
