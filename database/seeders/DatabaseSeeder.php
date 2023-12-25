@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Band;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,17 +24,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        Band::create([
-            'artist'=>'Pink Floyd',
-            'location'=>'Nepal',
-            
-            'email'=>'test@gmail.com',
-            'title'=>'Dark side of the moon',
-            'list'=>'speak to me , breathe , on the run , time , The great Gig in the sky , money, us and them,any colour you like, brain damage,eclipse',
-            'description'=>'asdaadasa
-            asdasdasd'
+      $user=User::factory()->create([
+        'name'=>'yug',
+        'email'=>"yug@gmail.com"
+      ]);
+        Band::factory(6)->create([
+            'user_id'=> $user->id
         ]);
-
-        Band::factory(6)->create();
     }
 }

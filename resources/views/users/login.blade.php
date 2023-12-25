@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Log In
             </h2>
-            <p class="mb-4">Log in p>
+            <p class="mb-4">Log in </p>
         </header>
 
         <form method="POST" action="/users/authenticate">
