@@ -15,15 +15,17 @@ return new class extends Migration
     {
         Schema::create('band', function (Blueprint $table) {
             $table->id();
-            $table->String("artist");
-            $table->String("location");
-            $table->String("email");
-            $table->String("logo")->nullable();
-            $table->String("title");
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string("artist");
+            $table->string("location");
+            $table->string("email");
+            $table->string("logo")->nullable();
+            $table->string("title");
             $table->string("list");
             $table->longText("description");
             $table->timestamps();
         });
+       
     }
 
     /**
